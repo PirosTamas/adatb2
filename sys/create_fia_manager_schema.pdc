@@ -1,0 +1,28 @@
+PROMPT Creating user FIA_MANAGER...
+----------------------------------
+-- 1. Create user, add grants   --
+----------------------------------
+DECLARE
+  v_count NUMBER;
+BEGIN
+  SELECT COUNT(*) INTO v_count FROM dba_users t WHERE t.username='FIA_MANAGER';
+  IF v_count = 1 THEN 
+    EXECUTE IMMEDIATE 'DROP USER fia_manager CASCADE';
+  END IF;
+END;
+/
+CREATE USER fia_manager 
+  IDENTIFIED BY "12345678" 
+  DEFAULT TABLESPACE users
+  QUOTA UNLIMITED ON users
+;
+
+GRANT CREATE TRIGGER TO fia_manager;
+GRANT CREATE SESSION TO fia_manager;
+GRANT CREATE TABLE TO fia_manager;
+GRANT CREATE VIEW TO fia_manager;
+GRANT CREATE SEQUENCE TO fia_manager;
+GRANT CREATE PROCEDURE TO fia_manager;
+GRANT CREATE TYPE TO fia_manager;
+
+PROMPT Done.
