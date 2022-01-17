@@ -14,4 +14,3 @@ where
 p.vilagbajnoki_cimek_szama > 0
 order by p.szuletesi_datum desc;
 
-select * from champion_wins_2021;

@@ -37,6 +37,10 @@ PROMPT Installing DB...
 @./triggers/futam_h_trg.trg
 @./triggers/versenyauto_h_trg.trg
 
+BEGIN
+  dbms_utility.compile_schema(schema => 'FIA_MANAGER');
+END;
+/
 -- FK
 @./alter/pilota_alter.sql
 @./alter/futam_alter.sql

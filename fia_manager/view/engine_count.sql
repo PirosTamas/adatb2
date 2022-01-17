@@ -6,4 +6,3 @@ from
 (select distinct p.csapatid, v.motor from versenyauto v join pilota p on p.id = v.pilotaid ) s
 group by s.motor;
 
-select * from engine_count;
