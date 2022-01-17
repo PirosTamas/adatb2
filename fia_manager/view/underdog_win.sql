@@ -1,3 +1,4 @@
+create or replace view underdog_win as
 select 
 p.keresztnev ||' '|| p.vezeteknev as Versenyzo,
 f.orszag,
