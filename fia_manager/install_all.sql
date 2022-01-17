@@ -25,7 +25,6 @@ PROMPT Installing DB...
 @./type/ty_versenyauto.typ
 @./type/ty_futam.typ
 @./type/ty_pilota_list.typ
-@./type/ty_konstruktor.typ
 
 -- Triggers
 @./triggers/pilota_trg.trg
@@ -58,11 +57,15 @@ PROMPT Installing DB...
 
 --Views
 @./view/champion_wins_2021.sql
-@./view/most_agressive_setup.sql
+@./view/most_aggressive_setup.sql
 @./view/safety_car_finish.sql
+@./view/engine_count.sql
+@./view/kozepes_hosszu.sql
+#./view/pilota_adatok.sql
 
 --Function
 @./function/same_nationality.fnc
+@./function/motor_darab.fnc
 
 
 
