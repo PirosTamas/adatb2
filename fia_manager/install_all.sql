@@ -65,7 +65,7 @@ END;
 @./view/safety_car_finish.sql
 @./view/engine_count.sql
 @./view/kozepes_hosszu.sql
-#./view/pilota_adatok.sql
+@./view/pilota_adatok.sql
 
 --Function
 @./function/same_nationality.fnc
